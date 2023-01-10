@@ -1,5 +1,4 @@
 def call(Map config = [:]) {
-    loadLinuxScript(name: 'hello-world.sh')
-    sh "./hello-world.sh ${config.name} ${config.dayOfWeek}"
+    sh "echo Hello World ${config.name}. It is ${config.dayOfWeek}."
     sh "node --version"
 }
